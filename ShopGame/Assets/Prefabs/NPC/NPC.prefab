@@ -93,9 +93,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7891919963188245625}
-  - component: {fileID: 7447088097976970480}
   - component: {fileID: 2425000579323513072}
   - component: {fileID: 3417591469266160322}
+  - component: {fileID: 7447088097976970480}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -119,18 +119,6 @@ Transform:
   - {fileID: 7275200788907118985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7447088097976970480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930646892799632893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907e2051220a7fa4ea86ddf5dd777216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2425000579323513072
 Rigidbody2D:
   serializedVersion: 4
@@ -187,9 +175,24 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.011126757, y: -0.011126637}
   m_Size: {x: 1.0563321, y: 2.001397}
   m_Direction: 0
+--- !u!114 &7447088097976970480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8930646892799632893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907e2051220a7fa4ea86ddf5dd777216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveSpeed: 4
+  maxMoveSpeed: 7
+  rb2D: {fileID: 2425000579323513072}

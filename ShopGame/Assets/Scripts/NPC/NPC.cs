@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private float minMoveSpeed;
+    [SerializeField] private float maxMoveSpeed;
+
+    [SerializeField] private Rigidbody2D rb2D;
     void Start()
     {
-        
+        NPCMovement();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    private void NPCMovement()
+    {
+        float randomMoveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);
+
+        float minMoveDirX = -1f;
+        float maxMoveDirX = 1f;
+        float moveDirX = Random.Range(minMoveDirX, maxMoveDirX);
+
+        Vector3 moveDir = new Vector3(moveDirX, 0, 0);
+        rb2D.velocity = moveDir * randomMoveSpeed;
     }
 }
