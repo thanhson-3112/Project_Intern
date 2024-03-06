@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCSpawner : MonoBehaviour
 {
-    [SerializeField] private Transform NPCPrefab;
+    [SerializeField] private Transform[] NPCPrefab;
 
     [SerializeField] private float spawnNPCTimer;
     void Start()
@@ -23,7 +23,9 @@ public class NPCSpawner : MonoBehaviour
         float spawnOffsetX = 8;
         float spawnOffsetY = -2.5f;
 
+        
+        int randomPrefabIndex = Random.Range(0, NPCPrefab.Length);
         Vector3 spawnPosition = new Vector3(spawnOffsetX, spawnOffsetY, 0);
-        Instantiate(NPCPrefab, spawnPosition, Quaternion.identity);
+        Instantiate(NPCPrefab[randomPrefabIndex], spawnPosition, Quaternion.identity);
     }
 }

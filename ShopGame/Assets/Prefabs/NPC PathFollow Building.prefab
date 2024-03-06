@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 979836613686143103}
   - component: {fileID: 2675087316586327943}
   - component: {fileID: 412768785672392478}
-  - component: {fileID: 9090084822259855513}
   - component: {fileID: 7541738253424978758}
+  - component: {fileID: 9090084822259855513}
   - component: {fileID: 3313040949557396064}
+  - component: {fileID: 4362636799708509771}
   m_Layer: 0
   m_Name: NPC PathFollow Building
   m_TagString: Untagged
@@ -183,19 +184,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.011126757, y: -0.011126637}
   m_Size: {x: 1.0563321, y: 2.001397}
   m_Direction: 0
---- !u!114 &9090084822259855513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5490796991934199582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631864b106c272543af5dcfd32e5bbc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 693398040158904652, guid: f609ead50d9ab9d46aedde587fae74ee, type: 3}
 --- !u!195 &7541738253424978758
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -218,6 +206,19 @@ NavMeshAgent:
   m_BaseOffset: 0.56
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &9090084822259855513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490796991934199582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631864b106c272543af5dcfd32e5bbc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 693398040158904652, guid: f609ead50d9ab9d46aedde587fae74ee, type: 3}
 --- !u!114 &3313040949557396064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +232,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownDuration: 3
+--- !u!114 &4362636799708509771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490796991934199582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe70b3e33856c045ad00d9f03a2c279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7120051846372617622}
+  newColor: {r: 0.8867924, g: 0.3865076, b: 0.3865076, a: 0.99607843}
