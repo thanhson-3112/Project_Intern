@@ -46,21 +46,11 @@ public class NPCDestroyer : MonoBehaviour
 
     // Sau khi den dich thi se dem nguoc roi destroy gameobject
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Building"))
-    //    {
-    //        Debug.Log(collision.gameObject.name);
-
-    //        StartCountdown();
-    //    }
-    //}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Building"))
         {
-            Debug.Log(collision.gameObject.name);
+            // Debug.Log(collision.gameObject.name);
 
             StartCountdown();
         }
