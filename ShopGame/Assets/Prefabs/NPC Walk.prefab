@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7275200788907118985}
   - component: {fileID: 4641613316845365408}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: NPC_Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.2603773, g: 0.2490779, b: 0.2490779, a: 1}
+  m_Color: {r: 0.24829152, g: 0.6830188, b: 0.18944106, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3417591469266160322}
   - component: {fileID: 7447088097976970480}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: NPC Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,6 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907e2051220a7fa4ea86ddf5dd777216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minMoveSpeed: 4
-  maxMoveSpeed: 7
+  minMoveSpeed: 5
+  maxMoveSpeed: 10
   rb2D: {fileID: 2425000579323513072}

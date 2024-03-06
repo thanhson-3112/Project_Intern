@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class NPCSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Transform NPCPrefab;
+
+    [SerializeField] private float spawnNPCTimer;
     void Start()
+    {
+        InvokeRepeating("SpawnNPC", 5, spawnNPCTimer);
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnNPC()
     {
-        
+        // offset to spawn off screen
+        float spawnOffsetX = 8;
+        float spawnOffsetY = -2.5f;
+
+        Vector3 spawnPosition = new Vector3(spawnOffsetX, spawnOffsetY, 0);
+        Instantiate(NPCPrefab, spawnPosition, Quaternion.identity);
     }
 }
