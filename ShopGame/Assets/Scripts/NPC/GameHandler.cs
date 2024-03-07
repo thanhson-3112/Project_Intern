@@ -18,7 +18,6 @@ public class GameHandler : MonoBehaviour
             Instantiate(dotPrefab, lineStartPosition + new Vector3(0, -1) * positionSize * i, Quaternion.identity);
             waitingQueuePositionList.Add(lineStartPosition + new Vector3(0, -1) * positionSize * i);
         }
-        WaitingQueue waitingQueue = new WaitingQueue(waitingQueuePositionList);
 
         // Kiem tra neu vi tri co the vao
 
