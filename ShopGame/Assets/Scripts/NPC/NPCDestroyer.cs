@@ -8,13 +8,11 @@ public class NPCDestroyer : MonoBehaviour
 
     private float currentTime; // Set the countdown duration in seconds
     private bool isCountdownActive = false;
-    // Start is called before the first frame update
     void Start()
     {
         currentTime = countdownDuration;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isCountdownActive)

@@ -97,10 +97,10 @@ GameObject:
   - component: {fileID: 412768785672392478}
   - component: {fileID: 7541738253424978758}
   - component: {fileID: 4362636799708509771}
-  - component: {fileID: 9090084822259855513}
   - component: {fileID: 3313040949557396064}
+  - component: {fileID: -8827914873812008417}
   m_Layer: 0
-  m_Name: NPC PathFollow Building
+  m_Name: MultipleWaypoint_NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,20 +220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7120051846372617622}
   newColor: {r: 0.8867924, g: 0.3865076, b: 0.3865076, a: 0.99607843}
---- !u!114 &9090084822259855513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5490796991934199582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631864b106c272543af5dcfd32e5bbc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 693398040158904652, guid: f609ead50d9ab9d46aedde587fae74ee, type: 3}
-  agent: {fileID: 0}
 --- !u!114 &3313040949557396064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,4 +232,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834778335890f7a4c858209ec1c9c84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownDuration: 2
+  countdownDuration: 3
+--- !u!114 &-8827914873812008417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490796991934199582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0355f2ae586040b1d20ad06e40dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wayPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  currentWaypointIndex: 0
