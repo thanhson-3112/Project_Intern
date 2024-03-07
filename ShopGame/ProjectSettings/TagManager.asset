@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Building
+  - Trap
+  - Ground
+  - CheckPoint
+  - Blood
+  - Door
   layers:
   - Default
   - TransparentFX
