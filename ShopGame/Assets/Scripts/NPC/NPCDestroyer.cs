@@ -1,13 +1,14 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCDestroyer : MonoBehaviour
 {
-    [SerializeField] private float countdownDuration = 3;
+    [SerializeField] private float countdownDuration = 3f;
 
-    private float currentTime; // Set the countdown duration in seconds
+    private float currentTime;
     private bool isCountdownActive = false;
+
     void Start()
     {
         currentTime = countdownDuration;
@@ -21,36 +22,37 @@ public class NPCDestroyer : MonoBehaviour
 
             if (currentTime <= 0)
             {
-                // Countdown has reached zero, handle the event
-                HandleCountdownCompletion();
+               HandleCountdownCompletion();
             }
+            isCountdownActive = false;
+        }
+        if (!isCountdownActive)
+        {
+            StartCoroutine(OutBuilding());
         }
     }
-    void HandleCountdownCompletion()
+
+    public void HandleCountdownCompletion()
     {
-        // Perform actions when the countdown reaches zero
         Debug.Log("Countdown completed!");
-        isCountdownActive = false;
-
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
-    public void StartCountdown()
+    IEnumerator OutBuilding()
     {
-        // Start the countdown
-        isCountdownActive = true;
-
+        yield return new WaitForSeconds(3f);
+        gameObject.SetActive(true);
     }
-
-    // Sau khi den dich thi se dem nguoc roi destroy gameobject
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Building"))
         {
-            // Debug.Log(collision.gameObject.name);
-
-            StartCountdown();
+            isCountdownActive = true;
+        }
+        if (collision.gameObject.CompareTag("DestroyPoint"))
+        {
+            Destroy(gameObject);
         }
     }
 }

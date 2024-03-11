@@ -98,10 +98,11 @@ GameObject:
   - component: {fileID: 7541738253424978758}
   - component: {fileID: 4362636799708509771}
   - component: {fileID: 9090084822259855513}
+  - component: {fileID: 3612578080207688879}
   - component: {fileID: 3313040949557396064}
   m_Layer: 0
   m_Name: NPC PathFollow Building
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 5490796991934199582}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.85, y: -2.4043837, z: 0}
+  m_LocalPosition: {x: -15, y: -3, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -157,6 +158,7 @@ CapsuleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5490796991934199582}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -180,7 +182,8 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: -0.011126757, y: -0.011126637}
   m_Size: {x: 1.0563321, y: 2.001397}
   m_Direction: 0
@@ -191,7 +194,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5490796991934199582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: -334000983
   m_Radius: 0.52
   m_Speed: 3.5
@@ -227,13 +230,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5490796991934199582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 631864b106c272543af5dcfd32e5bbc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 693398040158904652, guid: f609ead50d9ab9d46aedde587fae74ee, type: 3}
-  agent: {fileID: 0}
+  target: {fileID: 0}
+  stoppingDistance: 0.8
+--- !u!114 &3612578080207688879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490796991934199582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746694c3e46e2364d9b597b3e8abd0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  pauseTime: 2
 --- !u!114 &3313040949557396064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,4 +263,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834778335890f7a4c858209ec1c9c84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownDuration: 2
+  countdownDuration: 3
