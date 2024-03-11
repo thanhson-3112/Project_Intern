@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693398040158904652}
   - component: {fileID: 2259357328553092420}
+  - component: {fileID: 1257604874628177144}
   m_Layer: 0
   m_Name: Building
   m_TagString: Building
@@ -79,6 +80,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.9979491, y: 4.030419}
   m_EdgeRadius: 0
+--- !u!114 &1257604874628177144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897275490366504704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563fa21bef654d94b913ccc218ea4892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingsObjectSOArray: []
 --- !u!1 &3792978561898770244
 GameObject:
   m_ObjectHideFlags: 0

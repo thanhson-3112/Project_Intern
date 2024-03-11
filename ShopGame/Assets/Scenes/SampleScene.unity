@@ -781,7 +781,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c5d2dd22fa5864a870e9a9d0112222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCPrefab: {fileID: 979836613686143103, guid: a891431771fde8f49849b623a20ea274, type: 3}
+  NPCPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnNPCTimer: 0
 --- !u!4 &1726465346
 Transform:
@@ -853,8 +856,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1897275490366504704, guid: f609ead50d9ab9d46aedde587fae74ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1810902600272203553}
   m_SourcePrefab: {fileID: 100100000, guid: f609ead50d9ab9d46aedde587fae74ee, type: 3}
+--- !u!1 &1810902600272203552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1897275490366504704, guid: f609ead50d9ab9d46aedde587fae74ee, type: 3}
+  m_PrefabInstance: {fileID: 1810902600272203551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1810902600272203553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810902600272203552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20daa9b68780fc24d89482955c54aef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5328134179643133583
 PrefabInstance:
   m_ObjectHideFlags: 0
