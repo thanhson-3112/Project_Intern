@@ -48,9 +48,18 @@ public class NPCDestroyer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Building"))
         {
+<<<<<<< Updated upstream
             // Debug.Log(collision.gameObject.name);
 
             StartCountdown();
         }
+=======
+            isCountdownActive = true;
+        }
+        /*if (collision.gameObject.CompareTag("DestroyPoint"))
+        {
+            Destroy(gameObject);
+        }*/
+>>>>>>> Stashed changes
     }
 }
