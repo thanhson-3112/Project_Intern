@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PathFollow : MonoBehaviour
+public class NPCMultipleWaypoint : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    [SerializeField] Transform[] target;
 
-    NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent;
 
     private void Start()
     {
@@ -18,7 +18,6 @@ public class PathFollow : MonoBehaviour
 
     private void Update()
     {
-        agent.SetDestination(target.position);
-    }
 
+    }
 }
